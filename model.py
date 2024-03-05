@@ -251,7 +251,7 @@ def build_transformer(src_vocab_size:int, tgt_vocab_size:int, src_seq_len: int, 
     
     projection_layer = ProjectionLayer(d_model, tgt_vocab_size)
     
-    transformer = Transformer(encoder, decoderm src_embed, tgt_embed,src_pos, tgt_pos , projection_layer)
+    transformer = Transformer(encoder, decoder, src_embed, tgt_embed,src_pos, tgt_pos , projection_layer)
     
     
     for p in transformer.parameters():
